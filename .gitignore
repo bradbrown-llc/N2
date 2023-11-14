@@ -1,0 +1,5 @@
+bin/geth*
+bin/solc*
+log
+tmp
+com/node_modules
