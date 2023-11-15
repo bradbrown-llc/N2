@@ -1,0 +1,23 @@
+[
+    {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": true,
+        "name": "CHGOWN",
+        "outputs": false,
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "encoder": "${process.env.N2_PATH}/pact/UPGRADEABLE/8_CHGOWN_abiEncoder.mjs"
+    },
+    {
+        "inputs": true,
+        "name": "SETFACET",
+        "outputs": false,
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "encoder": "${process.env.N2_PATH}/pact/UPGRADEABLE/9_SETFACET_abiEncoder.mjs"
+    }
+]
