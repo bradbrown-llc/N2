@@ -1,1 +1,0 @@
-export * from '../com/B1.mjs'
