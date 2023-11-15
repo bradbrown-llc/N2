@@ -1,5 +1,6 @@
 {
     "imports": {
-        "N2": "./lib/index.ts"
+        "N2": "./lib/index.ts",
+        "chainlist": "./lib/chainlist/index.ts"
     }
 }
