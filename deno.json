@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "N2": "./lib/index.ts"
+    }
+}
