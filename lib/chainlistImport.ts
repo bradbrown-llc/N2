@@ -2,7 +2,7 @@
 
 const N2_CHAINLISTDATA = Deno.env.get('N2_CHAINLISTDATA') ?? new URL('./chainlistdata', import.meta.url).pathname
 
-const chainlistImport = async ({ method, at, target }: ChainlistOptions) => {
+const chainlistImport = async ({ method, save, at, target }: ChainlistOptions) => {
     switch (method) {
         case 'fetch': {
             const response = await fetch('https://chainlist.org/')
@@ -13,9 +13,11 @@ const chainlistImport = async ({ method, at, target }: ChainlistOptions) => {
             const rawJsonData = JSON.parse(rawTextData)
             const chains: ChainlistChain[] = rawJsonData?.props?.pageProps?.chains
             if (!chains) throw new Error('could not extract chains from chainlist rawJsonData')
-            const encoder = new TextEncoder()
-            const data = encoder.encode(JSON.stringify(chains, undefined, 4))
-            await Deno.writeFile(`${N2_CHAINLISTDATA}/${Date.now()}`, data)
+            if (save) {
+                const encoder = new TextEncoder()
+                const data = encoder.encode(JSON.stringify(chains, undefined, 4))
+                await Deno.writeFile(`${N2_CHAINLISTDATA}/${Date.now()}`, data)
+            }
             return chains
         }
         case 'read': {

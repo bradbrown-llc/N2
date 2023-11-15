@@ -64,7 +64,7 @@ type ChainlistDatum = {
 type ChainlistData = ChainlistData[]
 
 type ChainlistOptions = 
-    { method: 'fetch', at?: never, target?: never} |
-    { method: 'read', at?: never, target?: never} |
-    { method: 'read', at: number, target?: never} |
-    { method: 'read', at?: never, target: string}
+    { method: 'fetch', save?: boolean, at?: never, target?: never} |
+    { method: 'read', save?: never, at?: never, target?: never} |
+    { method: 'read', save?: never, at: number, target?: never} |
+    { method: 'read', save?: never, at?: never, target: string}
