@@ -1,3 +1,6 @@
+> ⛔️ **DEPRECATED** -
+I've already found a use for N3: mainnets and testnets. More abstractly, groups of groups of chains (which are groups of nodes). I think I'll just call it EVMJS.
+
 # N2
 **EIP-1193 and it's consequences have been a disaster for decentralized finance.** Every major web3 and EVM library has insufficient multichain support due to the EIP-1193 standard lacking any consideration for multiple chains. Even on one chain, the EIP-1193 standard limits users, developers, casual traders, and degens alike in that a "Provider" connects to a single blockchain node. Blockchains, by nature, consist of many nodes. So why should everyone be less connected to the blockchain than the nodes that make them? N2 is a lightweight EVM library built with minimal dependencies from the ground up, with a strong focus on multichain and multinode support.
 

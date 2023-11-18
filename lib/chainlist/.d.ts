@@ -37,22 +37,24 @@ interface Explorer {
 }
 
 interface Chain {
-    chain: string
-    chainId: number
-    chainSlug: string
+    chain?: string
+    chainId?: number
+    chainSlug?: string
     ens?: ENS
-    explorers: Explorer[]
-    faucets: string[]
+    explorers?: Explorer[]
+    faucets?: string[]
     features?: Feature[]
-    icon: string
-    name: string
-    infoURL: string
-    nativeCurrency: Coin
-    networkId: number
+    icon?: string
+    name?: string
+    infoURL?: string
+    nativeCurrency?: Coin
+    networkId?: number
     parent?: Parent
-    rpc: RPC[]
-    shortName: string
+    redFlags?: string[]
+    rpc: RPC|RPC[]
+    shortName?: string
+    status?: string
     title?: string
-    slip44: number
+    slip44?: number
     tvl?: number
 }
